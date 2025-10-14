@@ -2,7 +2,7 @@ import React from 'react';
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Button, Menu } from 'antd';
-import { MenuUnfoldOutlined, MenuFoldOutlined, CheckSquareOutlined, PictureOutlined } from '@ant-design/icons';
+import { MenuUnfoldOutlined, MenuFoldOutlined, CheckSquareOutlined, PictureOutlined, SearchOutlined } from '@ant-design/icons';
 
 import '../css/Sidebar.css';
 
@@ -58,11 +58,14 @@ const Sidebar = () => {
             onClick={handleSelectedKey}
         >
             <h3 className='sidebar-heading'>TODO App</h3>
+            <Menu.Item key='hero' className='sidebar-menu-item' title='Hero' icon={<PictureOutlined />} onClick={handleSelectedKey}>
+                <Link to='/hero'>Hero</Link>
+            </Menu.Item>
             <Menu.Item key='todos' className='sidebar-menu-item' title='Todos' icon={<CheckSquareOutlined />} >
                 <Link to='/todos'>Todos</Link>
             </Menu.Item>
-            <Menu.Item key='hero' className='sidebar-menu-item' title='Hero' icon={<PictureOutlined />} onClick={handleSelectedKey}>
-                <Link to='/hero'>Hero</Link>
+            <Menu.Item key='search' className='sidebar-menu-item' title='Search' icon={<SearchOutlined />} >
+                <Link to='/search'>Search</Link>
             </Menu.Item>
         </Menu> 
 

@@ -1,0 +1,20 @@
+.add-todo-form {
+    display: flex;
+    justify-content: center;
+    box-sizing: border-box;
+    margin: 0 20px;
+    padding: 10px;
+    gap: 8px;
+}
+
+.add-todo-input {
+    width: 100%; 
+    max-width: 400px;
+    margin: 20px 4px;
+}
+
+.add-todo-submit {
+    width: 100%;
+    max-width: 100px;
+    margin: 20px 4px;
+}

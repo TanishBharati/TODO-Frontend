@@ -1,10 +1,19 @@
 import React from 'react';
 
+import HeroImg from '../assets/Hero.webp';
+
 const Hero = () => {
   return (
-    <div style={{ textAlign: 'left' }}>
-      <h1 style={{ fontSize: 32, marginBottom: 8 }}>Hero</h1>
-      <p style={{ color: '#333' }}>This is the Hero page. If you see this text the route is working.</p>
+    <div className='main'>
+      <div className="hero-card">
+        <div className="hero-image">
+          <img src={HeroImg} alt="Hero Image" />
+        </div>
+        <div className="hero-content">
+          <h2 className="hero-title">The TODO App</h2>
+          <p className='hero-text'>Keep record of your everyday task here</p>
+        </div>
+      </div>
     </div>
   )
 }

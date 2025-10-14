@@ -1,0 +1,25 @@
+.main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    box-sizing: border-box;
+    margin: 0 20px;
+    padding: 10px;
+    gap: 8px;
+}
+
+.main h1 {
+    font-size: 32px; 
+    margin-bottom: 8px;
+}
+
+.main p {
+    color: #333;
+}
+
+.searchbar {
+    width: 100%; 
+    max-width: 800px;
+    margin: 20px auto;
+    
+}
