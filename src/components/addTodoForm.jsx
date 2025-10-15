@@ -13,8 +13,10 @@ const AddTodoForm = () => {
 
     const inputSubmitHandler = (e) => {
         e.preventDefault();
+
+        if(!input.trim()) return;
         dispatch(addTodo(input));
-        console.log(input + " added");
+        // console.log(input + " added");
         setInput('');
     };
 

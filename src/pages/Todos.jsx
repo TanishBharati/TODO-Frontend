@@ -1,12 +1,19 @@
-import React from 'react';
-import { useSelector } from 'react-redux';
+import React, { useEffect } from 'react';
+import { useSelector, useDispatch } from 'react-redux';
 
 import AddTodoForm from '../components/addTodoForm';
 import TodoList from '../components/TodoList';
 import '../css/Todos.css'
+import { fetchTodos } from '../features/todos/todoSlice';
 
 const Todos = () => {
+  // const todos = useSelector(state => state.todos.todos);
   const todos = useSelector(state => state.todos);
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    dispatch(fetchTodos());
+  }, [dispatch]);
 
   return (
     <div className='main'>

@@ -4,7 +4,7 @@ import { List } from 'antd';
 import { EditOutlined, DeleteFilled } from '@ant-design/icons';
 
 
-import { removeTodo, updateTodo } from '../features/todos/todoSlice';
+import { deleteTodo, updateTodo } from '../features/todos/todoSlice';
 import '../css/TodoList.css';
 
 const TodoList = ({ todos }) => {
@@ -14,7 +14,7 @@ const TodoList = ({ todos }) => {
         const newText = prompt('Edit Todo', todo.text);
 
         if(newText !== null && newText.trim() !== '') {
-        dispatch(updateTodo({ id: todo.id, text: newText.trim() }));
+        dispatch(updateTodo({ id: todo._id, text: newText.trim() }));
         }
     }
 
@@ -32,7 +32,7 @@ const TodoList = ({ todos }) => {
                             <button className='edit-btn' onClick={() => handleEdit(item)}>
                                 <EditOutlined />
                             </button>,
-                            <button className='delete-btn' onClick={() => dispatch(removeTodo(item.id))}>
+                            <button className='delete-btn' onClick={() => dispatch(deleteTodo(item._id))}>
                                 <DeleteFilled />
                             </button>
                         ]}
